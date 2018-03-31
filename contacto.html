@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Page Title</title>
+    <link rel="stylesheet" href="css/app.css">
+    <link rel="stylesheet" href="css/foundation.css">
+    <link rel="stylesheet" href="css/foundation.min.css">
+    <script src="js/vendor/foundation.js"></script>
+    <script src="js/vendor/foundation.min.js"></script>
+    <script src="js/app.js"></script>
+    <script src="js/vendor/jquery.js"></script>
+    <script src="js/vendor/what-input.js"></script>
+    <style>
+        #map {
+         height: 400px;
+         width: 100%;
+        }
+     </style>
+
+</head>
+<body>
+                <!-- Start Top Bar -->
+                <div class="top-bar">
+                        <div class="top-bar-left">
+                          <ul class="menu">
+                           <!-- <li><img src="Ventus Logo.jpg" height="200px" width="300px"></li> -->
+                            <li><a href="#"><h5>Quienes somos</h5></a></li>
+                            <li><a href="#"><h5>Mision y Vision</h5></a></li>
+                            <li><a href="#"><h5>Contacto</h5></a></li>
+                          </ul>
+                        </div>
+                      </div>
+                      <!-- End Top Bar --> 
+        </script>
+            <div class="grid-x align-center">
+                <div class="cell medium-8">
+                  <div class="blog-post">
+                        <h3>Ubicacion de google maps</h3>
+                        <div id="map"></div>
+                        <script>
+                          function initMap() {
+                            var uluru = {lat: 20.7425627, lng: -103.39568170000001};
+                            var map = new google.maps.Map(document.getElementById('map'), {
+                              zoom: 15,
+                              center: uluru
+                            });
+                            var marker = new google.maps.Marker({
+                              position: uluru,
+                              map: map
+                            });
+                          }
+                        </script>
+                        <script async defer
+                        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA-CBKjdT1UItC-AzB-v8drodCslfMMegc&callback=initMap">
+                        </script>
+                    <h3>Contáctenos</h3>
+                    <p><h5>En Ventus, siempre estamos buscando nuevos mercados y la creación de relaciones co-merciales a largo plazo con clientes.</h5></p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="grid-x align-center">
+                    <div class="cell medium-8">
+                      <div class="blog-post">
+                        <h3>Domicilio</h3>
+                        <p><h5>Covadonga #332 - 1<br>
+                            Col. Lomas de Zapopan<br>
+                            45130 Zapopan, Jalisco<br>
+                            Mexico<br>
+                        <br>
+                    E-mail: gerencia@ventusconsultoria.com<br>
+                Tel: (33) 3813-4051</h5></p>
+                      </div>
+                    </div>
+                  </div>
+</body>
+</html>
